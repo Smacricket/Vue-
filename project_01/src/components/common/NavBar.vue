@@ -1,0 +1,29 @@
+<template>
+  <mt-header :title="title">
+	  <div @click="goback" slot="left">
+	    <mt-button icon="back">返回</mt-button>
+	  </div>
+	  <mt-button icon="more" slot="right"></mt-button>
+	</mt-header>
+</template>
+
+<script>
+export default {
+	name: 'nav-bar',
+	props: ['title'],
+  data () {
+    return {
+      
+    }
+  },
+  methods: {
+  	goback() {
+  		this.$router.go(-1)
+  	}
+  }
+}
+</script>
+
+<style>
+
+</style>
