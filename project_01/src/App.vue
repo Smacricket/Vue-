@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-view/>
+    <router-view class="tmpl"/>
 
     <mt-tabbar v-model="selected">
       <mt-tab-item id="Home">

@@ -14,6 +14,7 @@ import '../node_modules/mint-ui/lib/style.css'
 
 import Axios from 'axios'
 Vue.prototype.$axios = Axios
+Axios.defaults.baseURL = '../../static/data'
 
 import MyUl from './components/common/MyUl.vue'
 import MyLi from './components/common/MyLi.vue'
@@ -30,6 +31,9 @@ Vue.filter('timeAgo', function(data) {
 	Moment.locale('zh-cn')
 	return Moment(data).fromNow()
 })
+
+import VuePreview from 'vue-preview'
+Vue.use(VuePreview)
 
 /* eslint-disable no-new */
 new Vue({

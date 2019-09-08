@@ -22,7 +22,7 @@
     created () {
       let _id = this.$route.params.id
       let message = []
-      this.$axios.get('../../static/data/newsdetail.json')
+      this.$axios.get('/getnewsdetail.json')
       .then(res => {
         message = res.data.message
         message.forEach( (val, index, arr) => {

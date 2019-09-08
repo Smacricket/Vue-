@@ -28,9 +28,9 @@ export default {
     return {
       imgs: [],
       modules: [{
-        title: '新闻资讯', className: 'back-news', route: { name:'NewsList' }
+        title: '新闻资讯', className: 'back-news', route: { name: 'NewsList' }
       },{
-        title: '图文分享', className: 'back-picshare', route: { path:'/' }
+        title: '图文分享', className: 'back-picshare', route: { name: 'PhotoList' }
       },{
         title: '商品展示', className: 'back-goodshow', route: { path:'/' }
       },{
@@ -43,7 +43,7 @@ export default {
     }
   },
   created () {
-    this.$axios.get('../../static/data/getswipe.json')
+    this.$axios.get('/getswipe.json')
     .then( res => {
       this.imgs = res.data.message
     })

@@ -1,5 +1,5 @@
 <template>
-  <div class="tmpl">
+  <div>
     <nav-bar title="新闻资讯"/>
 
     <div class="demo">
@@ -28,7 +28,7 @@
             }
         },
         created () {
-          this.$axios.get('../../static/data/getnewslist.json')
+          this.$axios.get('/getnewslist.json')
           .then(res => {
             this.newsList = res.data.message
           })
@@ -37,9 +37,6 @@
     }
 </script>
 <style scoped>
-.demo {
-  padding-bottom: 55px;
-}
 .demo a {
   display: block;
   width: 100%;
